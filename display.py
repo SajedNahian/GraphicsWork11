@@ -71,8 +71,8 @@ def display( screen ):
     ppm_name = 'pic.ppm'
     save_ppm( screen, ppm_name )
     p = Popen( ['display', ppm_name], stdin=PIPE, stdout = PIPE )
-    # p.communicate()
-    # os.remove(ppm_name)
+    p.communicate()
+    os.remove(ppm_name)
 
 def make_animation( name ):
     name_arg = 'anim/' + name + '*'
